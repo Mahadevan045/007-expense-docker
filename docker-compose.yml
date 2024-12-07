@@ -12,6 +12,7 @@ services: # docker run -d mysql:v1
 
   backend:
     image: mahadevan045/backend:v1
+    command: sh -c "sleep 5 && node /opt/server/index.js"
     container_name: backend 
     depends_on:
     - mysql
