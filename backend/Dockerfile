@@ -5,8 +5,8 @@ RUN addgroup -S expense && adduser -S expense -G expense && \
      mkdir /opt/server/ && \
      chown -R expense:expense /opt/server
 WORKDIR /opt/server/
-COPY package.json . && \
-     *.js .
+COPY package.json . 
+COPY *.js .
 RUN npm install
 USER expense
 EXPOSE 8081
